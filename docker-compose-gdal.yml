@@ -1,17 +1,10 @@
 services:
   gdal:  # you can change this to whatever you want.
-    build: .
     container_name: gdal
-    image: andrejreznik/python-gdal:py3.11-gdal3.8.4
-    dockerfile: Dockerfile-gdal
-    # volumes:
-    #   - "./:/tf/notebooks"
-    # ports:
-    #  - "8888:8888"
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #       -  driver: nvidia
-    #          count: all
-    #          capabilities: [gpu]
+    image: andrejreznik/python-gdal:stable
+    build:
+      dockerfile: gdal.Dockerfile
+    volumes:
+      - "./:/tf/notebooks"
+    ports:
+     - "8888:8888"
