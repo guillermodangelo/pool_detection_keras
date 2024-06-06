@@ -2,7 +2,7 @@ services:
   jupyter:  # you can change this to whatever you want.
     build: .
     container_name: keras
-    image: tensorflow/tensorflow:2.2.2-gpu-py3-jupyter
+    image: tensorflow/tensorflow:latest-gpu-jupyter
     volumes:
       - "./:/tf/notebooks"
     ports:

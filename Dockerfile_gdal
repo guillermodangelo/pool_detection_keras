@@ -1,0 +1,4 @@
+FROM andrejreznik/python-gdal:py3.11-gdal3.8.4
+
+RUN python -m pip install --upgrade pip
+RUN pip splitraster
