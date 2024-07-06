@@ -9,5 +9,7 @@ si ya está creado el contenedor
 docker start keras
 
 # para split de imagenes
+docker compose -f docker-compose-gdal.yml up --build
+
 
 docker start gdal
